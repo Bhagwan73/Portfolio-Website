@@ -20,6 +20,7 @@ import url_shortner from '../../assets/project_images/url_shortner.webp'
 import internship from '../../assets/project_images/internship.webp'
 import book_management from '../../assets/project_images/book_management.webp'
 import shoppingCart  from '../../assets/project_images/shoppingCart.webp'
+import spiderman from '../../assets/project_images/spiderman.webp'
 
 const techs = [
   {
@@ -101,7 +102,7 @@ const projects = [
     name: "Blogging Site",
     description: `The Blogging Site project is a dynamic web application that allows users to
      create, read, update, and delete blog posts. It provides a user-friendly interface for
-      managing blog content efficiently.`,
+      managing blog content efficiently.Users can easily create new blog posts by providing a title, content, and optional tags or categories. `,
     tags: [
       {
         name: "nodejs",
@@ -150,11 +151,56 @@ const projects = [
     source_code_link: process.env.REACT_APP_PROJECT_2
   },
   {
+    name: "SpiderSenseAI",
+    description: `SpiderSenseAI is a voice-enabled chatbot assistant named Spiderman, designed 
+    to interact with users and provide information or assistance based on their queries. The 
+    chatbot features a visually appealing 3D Spiderman model and utilizes advanced AI 
+    capabilities from the OpenAI API. `,
+    tags: [
+      {
+        name: "nodejs",
+        color: "primary",
+      },
+      {
+        name: "react",
+        color: "secondary",
+      },
+      {
+        name: "redux",
+        color: "tertiary",
+      },
+      {
+        name: "express",
+        color: "primary",
+      },
+      {
+        name: "css",
+        color: "primary",
+      },
+      {
+        name: "open_ai_api",
+        color: "secondary",
+      },
+      {
+        name: "threejs",
+        color: "tertiary",
+      },
+      {
+        name: "speech_recognition",
+        color: "tertiary",
+      }
+      
+    ],
+    image: spiderman,
+    source_code_link: process.env.REACT_APP_PROJECT_6
+  },
+  {
     name: "Internship",
     description: `
-    The Internship Website project is a dynamic web application that serves as an interactive
-     platform for internships. It offers comprehensive information about available internships
-      and enables users to easily apply for them`,
+    The Internship Website project aims to bridge the gap between aspiring students and valuable
+     internship opportunities by providing a user-friendly platform for internship exploration
+      and application. It offers comprehensive information about available internships and enables users to easily apply for them
+`,
     tags: [
       {
         name: "nodejs",
