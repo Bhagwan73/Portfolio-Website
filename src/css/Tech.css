@@ -1,0 +1,83 @@
+
+
+
+.tech-section {
+    position: relative;
+     width: 100%;
+    margin: 0 auto;
+    padding: 90px 10% 0 10%;
+  }
+  
+  .tech-content {
+    margin: 0 auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+  }
+  
+  .tech-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    text-align: center;
+    padding-top: 32px;
+  }
+  
+  .tech-grid  img{
+    width: 60px;
+    height: 60px;
+    padding-bottom: 10px;
+  }
+  
+  .orange-shadow {
+    box-shadow: 0 2px 4px rgba(243, 102, 25, 0.6);
+    padding: 10px;
+  }
+  
+  .blue-shadow {
+    box-shadow: 0 2px 4px rgba(66, 153, 225, 0.6);
+    padding: 10px;
+  }
+  
+  .yellow-shadow {
+    box-shadow: 0 2px 4px rgba(251, 191, 36, 0.6);
+    padding: 10px;
+  }
+  
+  .blue-light-shadow {
+    box-shadow: 0 2px 4px rgba(33, 150, 243, 0.6);
+    padding: 10px;
+  }
+  
+  .sky-shadow {
+    box-shadow: 0 2px 4px rgba(114, 216, 255, 0.6);
+    padding: 10px;
+  }
+  
+  .white-shadow {
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.6);
+    padding: 10px;
+  }
+  
+  .voilet-shadow {
+    box-shadow: 0 2px 4px #4f09e6;
+    padding: 10px;
+  }
+  
+  .gray-shadow {
+    box-shadow: 0 2px 4px rgba(156, 163, 175, 0.6);
+    padding: 10px;
+  }
+  
+  .green-shadow {
+    box-shadow: 0 2px 4px rgba(5, 212, 32, 0.6);
+    padding: 10px;
+  }
+  
+  @media (min-width: 640px) {
+    .tech-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }

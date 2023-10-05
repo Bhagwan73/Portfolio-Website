@@ -1,29 +1,58 @@
-import React from "react";
-import { Tilt } from "react-tilt";
-import { techs } from "./constant";
 
 
-export default function Experience(){
-  return (
-    <section className="experience-container" id="experience">
-      <div className="experience-content">
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+import '../css/Experiences.css'
+import { experiences } from './constant';
+
+function ExperienceCard({experience}){
+    return(
+        <VerticalTimelineElement
+        contentStyle={{  background: 'rgba(5, 174, 124, 0.29)', color: "#fff" }}
+        contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+        date={experience.date}
+        iconStyle={{ background: 'rgb(7, 4, 18)' }}
+        icon={
+          <div className='experience_icon'>
+            <img src={experience.icon} alt="experience_icon" className='icon_image' />
+          </div>
+        }
+      >
         <div>
-          <p className="heading-subtext">Tech Stack Proficiency</p>
-          <h2 className="heading">Experience</h2>
-          <p className="discription">These are the technologies I've worked with</p>
+          <h3 className='experience_title'>{experience.title}</h3>
         </div>
-
-        <div className="tech-grid">
-          {techs.map(({ id, src, title,style }) => (
-            <Tilt key={id} className={style}>
-              <img src={src} alt="" />
-              <p className="mt-4">{title}</p>
-            </Tilt>
+  
+        <ul className='experince_points_list'>
+          {experience.points.map((point, index) => (
+            <li  key={`experience-${index}`} className='experience_point' >
+              {point}
+            </li>
           ))}
+        </ul>
+      </VerticalTimelineElement>
+    )
+}
+
+
+
+export default function Experience() {
+    return (
+
+      <div className='experience_section' id="experience">
+        <div>
+          <p className="heading-subtext">What I have done so far</p>
+          <h2 className="heading" style={{paddingBottom:'30px'}}>Work Experience.</h2>
         </div>
-      </div>
-    </section>
-  );
-};
-
-
+     
+        <VerticalTimeline>
+           {
+            experiences.map((experience,index)=>{
+                return(
+                   <ExperienceCard experience={experience} key={index}/> 
+                )
+            })
+           }
+        </VerticalTimeline>
+        </div>
+    )
+}

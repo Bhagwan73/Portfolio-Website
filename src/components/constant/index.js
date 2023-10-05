@@ -2,32 +2,44 @@
 //TECH_STACK_LOGO
 
 import javascript from '../../assets/tech_stacks/javascript.png'
-import node from '../../assets/tech_stacks/node.png'
+import node from '../../assets/tech_stacks/nodejs.png'
 import react from '../../assets/tech_stacks/react.png'
 import mongodb from '../../assets/tech_stacks/mongodb.png'
 import express from '../../assets/tech_stacks/express.png'
-import mysql from '../../assets/tech_stacks/mysql.png'
 import redis from '../../assets/tech_stacks/redis.png'
-import git from '../../assets/tech_stacks/git.png'   
+import git from '../../assets/tech_stacks/git.png'
 import github from '../../assets/tech_stacks/github.png'
 import aws from '../../assets/tech_stacks/aws.png'
 import html from '../../assets/tech_stacks/html.png'
 import css from '../../assets/tech_stacks/css.png'
+import tailwind_css from '../../assets/tech_stacks/tailwind-css.png'
+import typescript from '../../assets/tech_stacks/typescript.png'
+import postgresql from '../../assets/tech_stacks/postgresql.png'
+import typeORM from '../../assets/tech_stacks/typeORM.png'
 
-// PROJECT COVER IMAGES
-import blogging_site from '../../assets/project_images/blogging_website.webp'
-import url_shortner from '../../assets/project_images/url_shortner.webp'
-import internship from '../../assets/project_images/internship.webp'
-import book_management from '../../assets/project_images/book_management.webp'
-import shoppingCart  from '../../assets/project_images/shoppingCart.webp'
-import spiderman from '../../assets/project_images/spiderman.webp'
+// PROJECT BACKGROUND IMAGES
+import project_1 from '../../assets/project_bg/project_1.jpg'
+import project_2 from '../../assets/project_bg/project_2.jpg'
+import project_3 from '../../assets/project_bg/project_3.jpg'
+import project_4 from '../../assets/project_bg/project_4.jpg'
+import project_5 from '../../assets/project_bg/urlShortner.jpg'
+import project_6 from '../../assets/project_bg/project_6.jpg'
+
+// EXPERIENCE LOGO 
+import functionup from '../../assets/service_cards/functionup.png'
+import dsa from '../../assets/service_cards/web.png'
+
+// PROJECT BACKGROUND IMAGES
+import bloggingSite from '../../assets/project_bg/bloggingSite.jpg'
+import urlShortner from '../../assets/project_bg/urlShortner.jpg'
+import spidersenseAI from '../../assets/project_bg/spidersenseAI.jpg'
 
 const techs = [
   {
     id: 1,
     src: node,
     title: "Node.js",
-    style: "green-shadow",
+    style: "yellow-shadow",
   },
   {
     id: 2,
@@ -55,14 +67,14 @@ const techs = [
   },
   {
     id: 6,
-    src: mysql,
-    title: "MySQL",
-    style: "sky-shadow",
+    src: postgresql,
+    title: "Postgresql",
+    style: "green-shadow"
   },
   {
     id: 7,
     src: aws,
-    title: "AWS_S3",
+    title: "AWS-S3",
     style: "voilet-shadow",
   },
   {
@@ -94,198 +106,167 @@ const techs = [
     src: css,
     title: "CSS",
     style: "blue-light-shadow",
+  },
+  {
+    id: 13,
+    src: tailwind_css,
+    title: "Tailwind-css",
+    style: "green-shadow"
+  },
+  {
+    id: 14,
+    src: typescript,
+    title: "Typescript",
+    style: "blue-light-shadow"
+  },
+  {
+    id: 15,
+    src: typeORM,
+    title: "TypeORM",
+    style: "orange-shadow"
   }
 ];
 
+
 const projects = [
+  // Blogging Site
   {
     name: "Blogging Site",
-    description: `The Blogging Site project is a dynamic web application that allows users to
-     create, read, update, and delete blog posts. It provides a user-friendly interface for
-      managing blog content efficiently.Users can easily create new blog posts by providing a title, content, and optional tags or categories. `,
-    tags: [
-      {
-        name: "nodejs",
-        color: "primary",
-      },
-      {
-        name: "mongodb",
-        color: "secondary",
-      },
-      {
-        name: "react",
-        color: "tertiary",
-      },
-      {
-        name: "express",
-        color: "primary",
-      },
-    ],
-    image: blogging_site,
-    source_code_link: process.env.REACT_APP_PROJECT_1
+    description: `The MERN Blogging Site is a dynamic web application that allows users to create, read,
+    update, and delete blog posts. It provides a user-friendly interface for efficiently managing blog
+    content. Users can easily create new blog posts by providing a title, summary, blogImage and content.
+    This project is built using the MERN stack and utilizes AWS S3 for image storage.`,
+    tags: ["nodejs", "mongodb", "react", "express", "aws","css3"],
+    background: bloggingSite,
+    githubLink:process.env.REACT_APP_BLOGGING_SITE_GITHUB,
+    liveLink:process.env.REACT_APP_BLOGGING_SITE_LIVE
   },
+  // LinkMagic URL Shortener
   {
-    name: "URL Shortener",
-    description: `The URL Shortener project is a web application that enables users to shorten
-     long URLs into concise and manageable links. Inspired by services like Bitly, it provides
-      a simple and efficient way to generate shortened URLs for easy sharing and tracking.`,
-    tags: [
-      {
-        name: "nodejs",
-        color: "primary",
-      },
-      {
-        name: "mongodb",
-        color: "secondary",
-      },
-      {
-        name: "redis",
-        color: "tertiary",
-      },
-      {
-        name: "express",
-        color: "primary",
-      },
-    ],
-    image: url_shortner,
-    source_code_link: process.env.REACT_APP_PROJECT_2
+    name: "LinkMagic URL Shortener",
+    description: `LinkMagic URL Shortener is a comprehensive web application that allows users to shorten
+    long URLs into concise and manageable links. Inspired by services like Bitly, it provides a simple
+    and efficient way to generate shortened URLs for easy sharing and tracking. The project is built using
+    the MERN stack.`,
+    tags: ["nodejs", "mongodb", "redis", "express", "react", "tailwind-css"],
+    background: urlShortner,
+    githubLink:process.env.REACT_APP_LINKMAGIC_URL_SHORTENER_GITHUB,
+    liveLink:process.env.REACT_APP_LINKMAGIC_URL_SHORTENER_LIVE
   },
+  // SpiderSenseAI
   {
     name: "SpiderSenseAI",
     description: `SpiderSenseAI is a voice-enabled chatbot assistant named Spiderman, designed 
     to interact with users and provide information or assistance based on their queries. The 
     chatbot features a visually appealing 3D Spiderman model and utilizes advanced AI 
     capabilities from the OpenAI API. `,
-    tags: [
-      {
-        name: "nodejs",
-        color: "primary",
-      },
-      {
-        name: "react",
-        color: "secondary",
-      },
-      {
-        name: "redux",
-        color: "tertiary",
-      },
-      {
-        name: "express",
-        color: "primary",
-      },
-      {
-        name: "css",
-        color: "primary",
-      },
-      {
-        name: "open_ai_api",
-        color: "secondary",
-      },
-      {
-        name: "threejs",
-        color: "tertiary",
-      },
-      {
-        name: "speech_recognition",
-        color: "tertiary",
-      }
-      
-    ],
-    image: spiderman,
-    source_code_link: process.env.REACT_APP_PROJECT_6
+    tags: ["nodejs", "mongodb", "react", "express", "redux", "css3", "threejs", "microphone"],
+    background: spidersenseAI,
+    githubLink:process.env.REACT_APP_LINKMAGIC_SPIDERSENSEAI_GITHUB,
+    liveLink:process.env.REACT_APP_LINKMAGIC_SPIDERSENSEAI_LIVE
   },
+  // Internship
   {
     name: "Internship",
     description: `
     The Internship Website project aims to bridge the gap between aspiring students and valuable
      internship opportunities by providing a user-friendly platform for internship exploration
-      and application. It offers comprehensive information about available internships and enables users to easily apply for them
-`,
-    tags: [
-      {
-        name: "nodejs",
-        color: "primary",
-      },
-      {
-        name: "mongodb",
-        color: "secondary",
-      },
-      {
-        name: "awsS3",
-        color: "tertiary",
-      },
-      {
-        name: "express",
-        color: "primary",
-      },
-    ],
-    image: internship,
-    source_code_link: process.env.REACT_APP_PROJECT_3
+      and application. It offers comprehensive information about available internships and enables users to easily apply for them`,
+    tags: ["nodejs", "mongodb", "express","javascript"],
+    background: project_1,
+    githubLink:process.env.REACT_APP_LINKMAGIC_INTERNSHIP_GITHUB,
+    liveLink:false
   },
+  // Book Management
   {
-    name: "Books_ Management",
+    name: "Book Management",
     description: `The Book Management Website project is a feature-rich web app designed
      for efficient book management. It allows users to store and manage book information along 
      with secure user authentication and authorization mechanisms.`,
-    tags: [
-      {
-        name: "nodejs",
-        color: "primary",
-      },
-      {
-        name: "mongodb",
-        color: "secondary",
-      },
-      {
-        name: "awsS3",
-        color: "tertiary",
-      },
-      {
-        name: "express",
-        color: "primary",
-      },
-      {
-        name: "jsonwebtoken",
-        color: "tertiary",
-      },
-    ],
-    image: book_management,
-    source_code_link: process.env.REACT_APP_PROJECT_4
+    tags: ["nodejs", "mongodb", "javascript", "express"],
+    background: project_5,
+    githubLink:process.env.REACT_APP_LINKMAGIC_BOOK_MANAGEMENT_GITHUB,
+    liveLink:false
   },
+  // Shopping Cart
   {
-    name: "E-Commerce Website",
-    description: `The E-Commerce Website project is a robust and user-friendly online shopping
-     platform. With its shopping cart features and functionalities, users can enjoy a seamless 
-     shopping experience.`,
-    tags: [
-      {
-        name: "nodejs",
-        color: "primary",
-      },
-      {
-        name: "mongodb",
-        color: "secondary",
-      },
-      {
-        name: "awsS3",
-        color: "tertiary",
-      },
-      {
-        name: "express",
-        color: "primary",
-      },
-      {
-        name: "bcrypt",
-        color: "secondary",
-      },
-      {
-        name: "jsonwebtoken",
-        color: "tertiary",
-      },
-    ],
-    image: shoppingCart,
-    source_code_link: process.env.REACT_APP_PROJECT_5
+    name: "Shopping Cart",
+    description: `The Shopping Cart project is an e-commerce solution that offers a robust and user-friendly online shopping experience.
+      With its shopping cart functionality, users can easily browse and add products to their cart, making online shopping a breeze.
+      Built using Node.js, MongoDB, AWS, and Express, this project provides essential e-commerce features for both customers and sellers.`,
+    tags: ["nodejs", "mongodb", "aws", "express"],
+    background: project_6,
+    githubLink:process.env.REACT_APP_LINKMAGIC_BOOK_MANAGEMENT_GITHUB,
+    liveLink:false
+  },
+  // Task Manager
+  {
+    name: "Task Manager",
+    description: `The Task Manager project is a powerful task management application built with the PERN (PostgreSQL, Express, React, Node.js) stack and TypeScript.
+     It provides a robust platform for users to efficiently organize and manage tasks.
+      Features include task creation, tracking, prioritization, and more.`,
+    tags: ["nodejs", "express", "postgresql","typescript","react", "tailwind-css"],
+    background: project_2,
+    githubLink: process.env.REACT_APP_LINKMAGIC_TASK_MANAGER_GITHUB,
+    liveLink: process.env.REACT_APP_LINKMAGIC_TASK_MANAGER_LIVE
   }
+
 ]
 
-export { techs, projects }
+
+const experiences = [
+  {
+    title: "Backend Developer Trainee",
+    icon: functionup,
+    date: "Joined Function Up in September 2022",
+    points: [
+      "Joined Function Up as a Backend Developer Trainee in September 2022.",
+      "Received comprehensive training in Backend Development utilizing Node.js, Express.js, and MongoDB.",
+      "Developed proficiency in building RESTful APIs and handling data storage and retrieval operations.",
+      "Applied AWS S3 for secure and scalable file storage and retrieval.",
+      "Utilized Redis for efficient caching, improving application performance.",
+      "Utilized strong problem-solving skills to troubleshoot and resolve backend development challenges.",
+      "Implemented JSON Web Tokens (JWT) for secure authentication and authorization.",
+      "Collaborated effectively with team members using Git for version control and code collaboration.",
+      "Developed backend projects by utilizing backend technology."
+    ],
+  },
+  {
+    title: "Frontend Developer Trainee",
+    icon: react,
+    date: "Focused on frontend technologies",
+    points: [
+      "Focused on learning frontend technologies, including React.js, HTML, CSS, and Tailwind-css.",
+      "Started building responsive and user-friendly web interfaces.",
+      "Began integrating frontend components with backend RESTful APIs to create full-fledged applications.",
+      "Collaborated closely with the team to ensure seamless integration of frontend and backend components.",
+      "Continuously improved skills in frontend development, creating impactful and efficient solutions.",
+    ],
+  },
+  {
+    title: "Fullstack/MERN Developer Trainee",
+    icon: express,
+    date: "Learned Fullstack Development and Developed Projects",
+    points: [
+      "Developed end-to-end web applications using MongoDB, Express.js, ReactJS, and Node.js.",
+      "Implemented secure authentication and authorization mechanisms.",
+      "Collaborated with cross-functional teams to deliver scalable and high-performance solutions.",
+      "Continued to refine skills in both frontend and backend technologies.",
+    ]
+  },
+  {
+    title: "Data Structures and Algorithms",
+    icon: dsa,
+    date: "Dedicated time to Data Structures and Algorithms",
+    points: [
+      "Dedicated time to learn and apply fundamental Data Structures and Algorithms (DSA) concepts.",
+      "Enhanced problem-solving skills and algorithmic thinking.",
+      "Applied DSA knowledge to optimize code and solve complex challenges.",
+      "Practiced DSA by solving questions on LeetCode and GeeksforGeeks.",
+      "Engaged in CodeZinger, a platform provided by FunctionUp, to further hone DSA skills.",
+    ],
+  },
+];
+
+
+export { techs, projects, experiences }

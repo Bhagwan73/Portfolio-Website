@@ -1,0 +1,47 @@
+
+.custom-cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    width: 12px; 
+    height: 12px; 
+    background-color: #ff5733; 
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    animation: shadowChange 2s infinite alternate;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ff5733; 
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  @keyframes shadowChange {
+    0% {
+      box-shadow: 0 0 50px rgba(0, 247, 255, 0.914), 0 0 50px rgba(0, 247, 255, 0.754);
+      background-color: rgba(0, 128, 128, 0.4);
+    }
+    25% {
+      box-shadow: 0 0 50px rgb(228, 218, 26), 0 0 50px yellow;
+      background-color: rgba(178, 189, 10, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 50px greenyellow, 0 0 50px greenyellow;
+      background-color: rgba(10, 189, 31, 0.691);
+    }
+    75% {
+      box-shadow: 0 0 50px red, 0 0 50px red;
+      background-color: rgba(255, 0, 0, 0.652);
+    }
+    100% {
+      box-shadow: 0 0 50px rgba(37, 202, 8, 0.968), 0 0 50px rgba(53, 151, 18, 0.938);
+      background-color: rgba(70, 232, 25, 0.691);
+    }
+  }
+  

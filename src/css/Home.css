@@ -1,0 +1,108 @@
+
+.home-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background-image: url("../assets/homebg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    padding: 90px 10% 0 10%;
+    
+  }
+  
+  
+    .home-content {
+      position: absolute;
+      top: 120px;
+      left: 10%;
+      right: 0;
+      max-width: 80rem;
+      margin: 0 auto;
+      border-left: #ffde14 1px solid;
+      padding: 20px;
+    }
+    
+  
+    .home-head-text {
+      font-weight: 900;
+      font-size: 2.5rem;
+      line-height: 1.5;
+    }
+    
+    .home-head-text span {
+      color: #ffde14;
+    }
+    
+    .home-sub-text {
+      font-weight: 500;
+      font-size: 1.5rem;
+      line-height: 1.5;
+      margin-top: 0.5rem;
+    }
+    
+  
+    .social-media a{
+      position: relative;
+      cursor: pointer;
+      z-index: 999;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border: 2px solid #ffde14;;
+      border-radius: 50%;
+      font-size: 20px;
+      color:#ffde14; ;
+      text-decoration: none;
+      margin: 20px 15px 20px 0;
+      transition: .5s ease;
+    }
+    .social-media a:hover{
+      background:#ffde14;;
+      color: #1f242d;
+      box-shadow:  0 0 20px #ffde14;;
+    }
+  
+    .home_buttons{
+      display: flex;
+      margin-bottom: 10px;
+    }
+  
+    .home_buttons a{
+      margin-right: 10px;
+      position: relative;
+      z-index: 9999;
+      font-size: 0.7rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(5, 124, 124, 0.563);
+      padding: 5px;
+      border-radius: 7px;
+      text-decoration: none;
+       color: rgba(255, 255, 255, 0.978);
+      box-shadow:  teal 0px 2px 7px;
+      border-bottom: teal 2px solid;
+      transition: 20ms;
+    }
+    .home_buttons a:hover{
+      box-shadow: none;
+      border-bottom: none;
+    }
+
+    .computer_canvas{
+      /* border: red solid 2px; */
+      width: 100%;
+      padding-bottom: 20px;
+    }
+
+
+
+    

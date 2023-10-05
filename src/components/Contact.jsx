@@ -1,11 +1,12 @@
 import { useState } from "react";
 import EarthCanvas from "./canvas/Earth";
 import emailjs from '@emailjs/browser'
+import '../css/Contact.css'
 
 function ContactForm() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
-  
+
   const handleChange = (e) => {
     const { target } = e;
     const { name, value } = target;
@@ -19,8 +20,8 @@ function ContactForm() {
       setLoading(false);
       return (alert("please fill out all field"))
     }
-    const TEMPLATE = { 
-      from_name: form.name, 
+    const TEMPLATE = {
+      from_name: form.name,
       to_name: process.env.REACT_APP_MY_NAME,
       from_email: form.email,
       to_email: process.env.REACT_APP_GMAIL_CONTACT_PAGE,
@@ -46,10 +47,16 @@ function ContactForm() {
 
   return (
     <section id="contact" className="contact_section">
+      <div>
+        <p className="heading-subtext">Get in touch</p>
+        <h3 className="heading">Contact.</h3>
+      </div>
+
+      <div className="contact_content">
       <div className="form-container">
         <form onSubmit={handleSubmit} className="form">
-          <p className="section-subtext">Get in touch</p>
-          <h3 className="section-headtext">Contact.</h3>
+          <p className="form-subtext">Get in touch</p>
+          <h3 className="form-headtext">Contact.</h3>
 
           <label className="form-label">
             <span className="label-text">Your Name</span>
@@ -90,10 +97,12 @@ function ContactForm() {
           </button>
         </form>
       </div>
-      <div 
-       className="flex-1 auto-height medium-height fixed-height">
+      <div
+        className="earth_canva">
         <EarthCanvas />
       </div>
+      </div>
+
     </section>
   );
 };
