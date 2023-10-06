@@ -20,8 +20,6 @@ import typeORM from '../../assets/tech_stacks/typeORM.png'
 // PROJECT BACKGROUND IMAGES
 import project_1 from '../../assets/project_bg/project_1.jpg'
 import project_2 from '../../assets/project_bg/project_2.jpg'
-import project_3 from '../../assets/project_bg/project_3.jpg'
-import project_4 from '../../assets/project_bg/project_4.jpg'
 import project_5 from '../../assets/project_bg/urlShortner.jpg'
 import project_6 from '../../assets/project_bg/project_6.jpg'
 
@@ -160,7 +158,7 @@ const projects = [
     to interact with users and provide information or assistance based on their queries. The 
     chatbot features a visually appealing 3D Spiderman model and utilizes advanced AI 
     capabilities from the OpenAI API. `,
-    tags: ["nodejs", "mongodb", "react", "express", "redux", "css3", "threejs", "microphone"],
+    tags: ["nodejs", "mongodb", "react", "express", "redux", "css3", "microphone"],
     background: spidersenseAI,
     githubLink:process.env.REACT_APP_LINKMAGIC_SPIDERSENSEAI_GITHUB,
     liveLink:process.env.REACT_APP_LINKMAGIC_SPIDERSENSEAI_LIVE

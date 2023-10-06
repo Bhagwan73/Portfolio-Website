@@ -1,7 +1,6 @@
 import ComputersCanvas from "./canvas/Computer";
 import "../css/Home.css"
 import leetcode from '../assets/tech_stacks/leetcode.png'
-import geeksforgeeks from '../assets/tech_stacks/geeksforgeeks.png'
 
 export default function Home() {
   return (
@@ -17,7 +16,7 @@ export default function Home() {
           <a href={process.env.REACT_APP_GITHUB_URL} target="_blank" rel="noopener noreferrer"> <i class='bx bxl-github'></i> </a>
           <a href={process.env.REACT_APP_GMAIL_URL} target="_blank" rel="noopener noreferrer"> <i class='bx bxl-gmail'></i> </a>
           <a href={process.env.REACT_APP_LEETCODE_URL} target="_blank" rel="noopener noreferrer"><img src={leetcode} alt="" width={'20px'} height={'20px'} /></a>
-          <a href={process.env.REACT_APP_GEEKSFORGEEKS_URl} target="_blank" rel="noopener noreferrer"><img src={geeksforgeeks} alt="" width={'20px'} height={'20px'} /></a>
+         
         </div>
 
         <div className="home_buttons">

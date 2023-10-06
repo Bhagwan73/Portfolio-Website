@@ -1,7 +1,6 @@
 
 import '../css/Projects.css'
 import redis from '../assets/tech_stacks/redis.png'
-import threejs from '../assets/tech_stacks/threejs.png'
 
 function ProjectCard({ name ,background , githubLink ,liveLink}) {
     return (
@@ -37,7 +36,6 @@ function ProjectSlideContent({project}) {
                         tag ==="express" ? <div style={{fontSize:"19px"}} key={index}>ex</div>
                         : tag ==="redis" ? <div><img src={redis} alt="redis" width={'25px'} height={'25px'} /> </div>
                         : tag ==="microphone"  ?  <div key={index}> <i className="bx bxs-microphone"></i> </div>
-                        : tag ==="threejs" ?   <div><img src={threejs} alt="redis" width={'25px'} height={'25px'} /> </div>
                         : <div key={index}> <i className={`bx bxl-${tag}`}></i> </div>
                       )
                   })}
